@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI; //нужно для работы addlistener
-
+using UnityEngine.UI;
 public class StartButtonScript : MonoBehaviour
 {
     //скрипт для кнопки start:
@@ -14,12 +13,7 @@ public class StartButtonScript : MonoBehaviour
     GameObject ball;
     //public GameObject Opener;
     public float GravityScale = 1f; 
-
-
-    //OpenerOpening opener = new OpenerOpening();
-
-    private Rigidbody2D ballRb; // Для 2D
-
+    private Rigidbody2D ballRb;
     void Start()
     {
         //startButt = Button.FindObjectOfType(GameObject);
@@ -33,9 +27,7 @@ public class StartButtonScript : MonoBehaviour
 
             if (ballRb != null)
             {
-                ballRb.gravityScale = 0f; // Выключаем гравитацию при старте
-                //ball.SetActive(false);
-                
+                ballRb.gravityScale = 0f; 
             }
         }
         
@@ -47,13 +39,7 @@ public class StartButtonScript : MonoBehaviour
     {
         if (ballRb != null)
         {
-            //ball.SetActive(true);
-            ballRb.gravityScale = GravityScale; // Включаем гравитацию
-            //Debug.Log("Гравитация активирована!");
-
-            //opener.OpenerMove();
-
-
+            ballRb.gravityScale = GravityScale; 
         }
 
     }

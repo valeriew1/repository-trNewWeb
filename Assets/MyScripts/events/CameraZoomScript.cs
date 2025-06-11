@@ -4,19 +4,17 @@ public class CameraZoomScript : MonoBehaviour
 {
 
     [Header("Zoom Settings")]
-    [SerializeField] private float zoomSize = 5f;          // Желаемый размер камеры (для ортографической)
-    [SerializeField] private float zoomDuration = 2f;      // Длительность эффекта в секундах
-    [SerializeField] private Transform zoomTarget;         // Объект, к которому приближаемся (игрок/шарик)
-    //[SerializeField] private float timeSlowdownFactor = 0.2f; // Замедление времени (0.2 = 20% скорости)
-
-    private Camera cam;                // Ссылка на компонент камеры
-    private float originalSize;        // Исходный размер камеры
-    private Vector3 originalPosition;  // Исходная позиция камеры
-    private bool shouldZoom = false;   // Флаг активации эффекта
-    private float zoomTimer = 0f;      // Таймер прогресса
+    [SerializeField] private float zoomSize = 5f;
+    [SerializeField] private float zoomDuration = 2f;
+    [SerializeField] private Transform zoomTarget;
+    private Camera cam;
+    private float originalSize;
+    private Vector3 originalPosition;
+    private bool shouldZoom = false;
+    private float zoomTimer = 0f;
     private Vector3 targetPos;
     private float progress;
-
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,7 +22,7 @@ public class CameraZoomScript : MonoBehaviour
         originalSize = cam.orthographicSize;
         originalPosition = transform.position;
     }
-
+    
     // Update is called once per frame
     void Update()
     {

@@ -11,18 +11,9 @@ public class SceneManageLoadLevel : MonoBehaviour
     {
         newLevelBut.onClick.AddListener(OnNextLevelButClick);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void NextLevel() 
+    public void OnNextLevelButClick() 
     { 
-        //newLevelBut.onClick.AddListener(() => { SceneManager.LoadScene("Level1"); });
-
-
+        SceneManager.LoadScene(NextSceneOrder); 
     }
 
     public void OnNextLevelButClick() 

@@ -76,7 +76,7 @@ public class OrdinaryFigureController : MonoBehaviour
             }
         }
     }
-
+    
     
     void Update()
     {
@@ -114,7 +114,7 @@ public class OrdinaryFigureController : MonoBehaviour
         isMoving = false;
         HighlightObject(th, false);
     }
-
+    
     //public void ResetPosition() 
     //{
     //    isMoving = false;
@@ -131,7 +131,7 @@ public class OrdinaryFigureController : MonoBehaviour
 
         Vector3 cameraMin = Camera.main.transform.position - new Vector3(cameraWidth / 2, cameraHeight / 2, 0);
         Vector3 cameraMax = Camera.main.transform.position + new Vector3(cameraWidth / 2, cameraHeight / 2, 0);
-
+        
         // Если нужно учитывать размеры объекта
         if (keepFullObjectInView)
         {

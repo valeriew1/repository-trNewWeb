@@ -98,7 +98,7 @@ public class ExperimentalScript : MonoBehaviour
             }
         }
     }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -142,7 +142,7 @@ public class ExperimentalScript : MonoBehaviour
         else
             transform.position = targetPosition;
     }
-
+    
 
 
     //private void OnMouseEnter()
@@ -153,7 +153,7 @@ public class ExperimentalScript : MonoBehaviour
     //{
     //    //figure.GetComponent<SpriteRenderer>().color = spriteRenderer.color;
     //}
-     void OnMouseDown()
+    void OnMouseDown()
     {
 
         isMoving = true;

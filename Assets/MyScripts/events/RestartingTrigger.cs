@@ -6,6 +6,7 @@ public class RestartingTrigger : MonoBehaviour
     GameObject ballSTARTLOC;
     private Vector2 worldPosSTARTBall;
     private Rigidbody2D rbBall;
+    
     void Start()
     {
 
@@ -25,7 +26,7 @@ public class RestartingTrigger : MonoBehaviour
     {
         
     }
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (ball != null && other.CompareTag("Player") )
