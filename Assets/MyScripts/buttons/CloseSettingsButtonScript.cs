@@ -4,18 +4,11 @@ using UnityEngine.UI;
 public class CloseSettingsButtonScript : MonoBehaviour
 {
     [SerializeField] private Button CloseSetBut;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         CloseSetBut.onClick.AddListener(onClickCloseSetBut);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     public void onClickCloseSetBut() 
     {
         Canvas[] allCanvases = Resources.FindObjectsOfTypeAll<Canvas>();
@@ -24,7 +17,6 @@ public class CloseSettingsButtonScript : MonoBehaviour
             if (canvas.name == "CanvasMenu")
             {
                 canvas.gameObject.SetActive(true);
-
             }
             if (canvas.name == "SettingsCanvas")
             {
@@ -32,5 +24,4 @@ public class CloseSettingsButtonScript : MonoBehaviour
             }
         }
     }
-
 }
