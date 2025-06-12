@@ -3,14 +3,12 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 public class AddButtonScript : MonoBehaviour
 {
-
     [SerializeField] private GameObject[] AddObjects;
     [SerializeField] private GameObject centralObject;
     [SerializeField] private Button AddButt;
 
     private GameObject chosenObj;
     private int currentAddIndex = 0;
-
     private bool activator = false;
     private Color selectedColor = Color.darkGreen;
     private Material originMaterial;
@@ -27,7 +25,6 @@ public class AddButtonScript : MonoBehaviour
             if (AddObjects.Length > 0)
             {
                 AddObject();
-                
                 activator = false;
             }
         }
@@ -56,6 +53,5 @@ public class AddButtonScript : MonoBehaviour
     private void OnAddButtonClick()
     {
         activator = true;
-        
     }
 }
