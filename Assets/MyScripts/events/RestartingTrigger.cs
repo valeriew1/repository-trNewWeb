@@ -2,16 +2,10 @@ using UnityEngine;
 
 public class RestartingTrigger : MonoBehaviour
 {
-    //если мячик улетает куда не надо, не достигая finish точки,
-    //уровень перезапускается по этому триггеру (прикреплен к стенам - dead-zone)
-
     GameObject ball;
     GameObject ballSTARTLOC;
     private Vector2 worldPosSTARTBall;
     private Rigidbody2D rbBall;
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
@@ -19,10 +13,10 @@ public class RestartingTrigger : MonoBehaviour
         ballSTARTLOC = GameObject.Find("PlayerStartPoint");
         rbBall = ball.GetComponent<Rigidbody2D>();
 
-        //координаты начальной позиции
-        Transform ballSTARTLOC_transform = ballSTARTLOC.transform; //кэшируем 
-        worldPosSTARTBall = ballSTARTLOC_transform.position; //получили глобальные координаты
-        //transform.position = worldPosSTARTBall; - не здесь, ниже будет
+        //ГЄГ®Г®Г°Г¤ГЁГ­Г ГІГ» Г­Г Г·Г Г«ГјГ­Г®Г© ГЇГ®Г§ГЁГ¶ГЁГЁ
+        Transform ballSTARTLOC_transform = ballSTARTLOC.transform; //ГЄГЅГёГЁГ°ГіГҐГ¬ 
+        worldPosSTARTBall = ballSTARTLOC_transform.position; //ГЇГ®Г«ГіГ·ГЁГ«ГЁ ГЈГ«Г®ГЎГ Г«ГјГ­Г»ГҐ ГЄГ®Г®Г°Г¤ГЁГ­Г ГІГ»
+        //transform.position = worldPosSTARTBall; - Г­ГҐ Г§Г¤ГҐГ±Гј, Г­ГЁГ¦ГҐ ГЎГіГ¤ГҐГІ
 
     }
 
@@ -36,10 +30,10 @@ public class RestartingTrigger : MonoBehaviour
     {
         if (ball != null && other.CompareTag("Player") )
         {
-            ball.transform.position = worldPosSTARTBall; //переместили
+            ball.transform.position = worldPosSTARTBall; //ГЇГҐГ°ГҐГ¬ГҐГ±ГІГЁГ«ГЁ
             rbBall.gravityScale = 0f;
             rbBall.mass = 0f;
-            rbBall.linearVelocity = Vector2.zero; //остановили, чтобы дальше не летал по кругу
+            rbBall.linearVelocity = Vector2.zero; //Г®Г±ГІГ Г­Г®ГўГЁГ«ГЁ, Г·ГІГ®ГЎГ» Г¤Г Г«ГјГёГҐ Г­ГҐ Г«ГҐГІГ Г« ГЇГ® ГЄГ°ГіГЈГі
 
         }
         
