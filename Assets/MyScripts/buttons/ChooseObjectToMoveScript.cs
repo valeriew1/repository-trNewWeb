@@ -3,8 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class ChooseObjectToMoveScript : MonoBehaviour
-{ 
-    [Header("Настройки кнопки")]
+{
     [SerializeField] private GameObject[] AddObjects;
     [SerializeField] private GameObject centralObject;
     [SerializeField] private Button AddButt;

@@ -57,12 +57,12 @@ public class FinishingTrigger : MonoBehaviour
     {
         
     }
-    
+
     private void OnTriggerEnter2D(Collider2D other)
-    {       
+    {
        
         Canvas[] allCanvases = Resources.FindObjectsOfTypeAll<Canvas>();
-                        
+
                 
         if (ball != null && other.CompareTag("Player")&& hasTriggered == false)
         {

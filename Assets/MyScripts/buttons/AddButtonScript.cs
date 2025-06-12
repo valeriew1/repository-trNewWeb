@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 public class AddButtonScript : MonoBehaviour
 {
+
     [SerializeField] private GameObject[] AddObjects;
     [SerializeField] private GameObject centralObject;
     [SerializeField] private Button AddButt;
@@ -54,7 +55,7 @@ public class AddButtonScript : MonoBehaviour
 
     private void OnAddButtonClick()
     {
-        activator = true; 
+        activator = true;
         
     }
 }

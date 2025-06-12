@@ -38,7 +38,7 @@ public class ResetButtonScript : MonoBehaviour
 
                 activator = false;
             } 
-        }        
+        }
         
     }
 

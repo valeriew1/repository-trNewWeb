@@ -54,7 +54,7 @@ public class NonOrdinaryFigureController : MonoBehaviour
     private Color RotationColor = Color.greenYellow; //почему ты не меняешь цвет на какой я хочу... почему цвет настроения - черный?....... UPD:спс, друг, что начал меняться)
     private Material originMaterial;
     private Color originColor;
-    
+
 
     void Start()
     {
@@ -75,7 +75,7 @@ public class NonOrdinaryFigureController : MonoBehaviour
             {
                 objectBounds.Encapsulate(renderers[i].bounds);
                 center = renderers[i].bounds.center;
-            }            
+            }
             
         }
         else
@@ -126,7 +126,7 @@ public class NonOrdinaryFigureController : MonoBehaviour
             else
                 transform.position = originalPosition;
             //}
-            
+
 
             //if (ShiftPressed == true)
             //{
@@ -215,7 +215,7 @@ public class NonOrdinaryFigureController : MonoBehaviour
             //transform.Rotate(0, 0, angle);
         }
     }
-    
+
    
 
 
