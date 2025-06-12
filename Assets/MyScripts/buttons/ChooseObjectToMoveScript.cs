@@ -13,5 +13,4 @@ public class ChooseObjectToMoveScript : MonoBehaviour
     private Color selectedColor = Color.darkGreen;
     private Material originMaterial;
     private Color originColor;
-
 }
