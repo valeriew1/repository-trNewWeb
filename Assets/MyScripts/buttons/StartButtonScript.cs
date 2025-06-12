@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI; //íóæíî äëÿ ðàáîòû addlistener
+using UnityEngine.UI; //нужно для работы addlistener
 
 public class StartButtonScript : MonoBehaviour
 {
@@ -19,7 +19,9 @@ public class StartButtonScript : MonoBehaviour
             ballRb = ball.GetComponent<Rigidbody2D>();
             if (ballRb != null)
             {
-                ballRb.gravityScale = 0f; 
+                ballRb.gravityScale = 0f; // ��������� ���������� ��� ������
+                //ball.SetActive(false);
+                
             }
         }
     }
@@ -28,7 +30,13 @@ public class StartButtonScript : MonoBehaviour
     {
         if (ballRb != null)
         {
-            ballRb.gravityScale = GravityScale; 
+            //ball.SetActive(true);
+            ballRb.gravityScale = GravityScale; // �������� ����������
+            //Debug.Log("���������� ������������!");
+
+            //opener.OpenerMove();
+
+
         }
     }    
 }
