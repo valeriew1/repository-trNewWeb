@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class NextLevelScript : MonoBehaviour
 {
-
     [SerializeField] private Button nextLevelButton;
     [SerializeField] private int NextLevelNumber;
     
@@ -13,15 +12,8 @@ public class NextLevelScript : MonoBehaviour
         nextLevelButton.onClick.AddListener(OnNextLevelButtonClick);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void OnNextLevelButtonClick() 
     {
         SceneManager.LoadScene(NextLevelNumber);
     }
-
 }
