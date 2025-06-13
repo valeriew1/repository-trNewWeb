@@ -4,7 +4,6 @@ using UnityEngine.UI;
 public class OpenSettingsScript : MonoBehaviour
 {
     [SerializeField] private Button SettingsButton;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         SettingsButton.onClick.AddListener(OnSettingsButScript);
