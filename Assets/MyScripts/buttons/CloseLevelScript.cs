@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
 public class CloseLevelScript : MonoBehaviour
 {
     [SerializeField] private Button closeBut;
@@ -9,7 +8,6 @@ public class CloseLevelScript : MonoBehaviour
     {
         closeBut.onClick.AddListener(OnCloseButClick);
     }
-
     public void OnCloseButClick() 
     {
         SceneManager.LoadScene(0);
