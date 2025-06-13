@@ -13,7 +13,6 @@ public class NonOrdinaryFigureController : MonoBehaviour
     [SerializeField] private float minAngle = -45f;
     [SerializeField] private float maxAngle = 45f;
     [SerializeField] private bool keepFullObjectInView = true;
-
     private bool ShiftPressed;
     private Vector3 center;
     private Vector3 mouseWorldPos;
@@ -30,7 +29,6 @@ public class NonOrdinaryFigureController : MonoBehaviour
         originalPosition = transform.position;
         CalculateObjectBounds();
     }
-
     private void CalculateObjectBounds()
     {
         Renderer[] renderers = GetComponentsInChildren<Renderer>();
@@ -57,7 +55,6 @@ public class NonOrdinaryFigureController : MonoBehaviour
             }
         }
     }
-
     void Update()
     {
         ShiftPressed = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
@@ -67,7 +64,6 @@ public class NonOrdinaryFigureController : MonoBehaviour
             mouseWorldPos.z = transform.position.z;
             originalPosition = mouseWorldPos;
             originalPosition = ClampPositionToCameraView(originalPosition);
-
             if (smoothMovement)
                 transform.position = Vector3.Lerp(transform.position, originalPosition, dragSpeed * Time.deltaTime);
             else
@@ -81,7 +77,6 @@ public class NonOrdinaryFigureController : MonoBehaviour
             else if (ShiftPressed == false) { isRotating = false; }
         }
     }
-
     void OnMouseDown()
     {
         if (Input.GetMouseButtonDown(0))
@@ -90,26 +85,22 @@ public class NonOrdinaryFigureController : MonoBehaviour
             HighlightObject(th, true);
         }
     }
-
     private void OnMouseUp()
     {
         isMoving = false;
         isRotating = false;
         HighlightObject(th, false);
     }
-
     private void Rotate() 
     {
         if (isRotating == true)
         {
             Vector3 currentMouseRotationPosition = Input.mousePosition;
             float deltaX = (currentMouseRotationPosition.x - originalPosition.x) * rotationSpeed * Time.deltaTime;
-
             float rotationAmount = invertRotation? -deltaX : deltaX;
             transform.Rotate(0, 0, rotationAmount / 50);
         }
     }
-
     private Vector3 ClampPositionToCameraView(Vector3 targetPos)
     {
         if (Camera.main == null) return targetPos;
@@ -117,7 +108,6 @@ public class NonOrdinaryFigureController : MonoBehaviour
         float cameraWidth = cameraHeight * Camera.main.aspect;
         Vector3 cameraMin = Camera.main.transform.position - new Vector3(cameraWidth / 2, cameraHeight / 2, 0);
         Vector3 cameraMax = Camera.main.transform.position + new Vector3(cameraWidth / 2, cameraHeight / 2, 0);
-
         if (keepFullObjectInView)
         {
             float objectWidth = objectBounds.size.x / 2;
@@ -137,7 +127,6 @@ public class NonOrdinaryFigureController : MonoBehaviour
         }
         return targetPos;
     }
-
     private void HighlightObject(GameObject obj, bool highlight)
     {
         Renderer renderer = obj.GetComponent<Renderer>();
