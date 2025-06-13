@@ -9,12 +9,7 @@ public class OpenSettingsScript : MonoBehaviour
         SettingsButton.onClick.AddListener(OnSettingsButScript);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     public void OnSettingsButScript() 
     {
         Canvas[] allCanvases = Resources.FindObjectsOfTypeAll<Canvas>();
