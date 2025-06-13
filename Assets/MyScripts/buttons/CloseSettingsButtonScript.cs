@@ -8,7 +8,6 @@ public class CloseSettingsButtonScript : MonoBehaviour
     {
         CloseSetBut.onClick.AddListener(onClickCloseSetBut);
     }
-    
     public void onClickCloseSetBut() 
     {
         Canvas[] allCanvases = Resources.FindObjectsOfTypeAll<Canvas>();
