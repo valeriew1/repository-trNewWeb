@@ -1,23 +1,19 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class ResetButtonScript : MonoBehaviour
 {
     [SerializeField] private GameObject[] resetObjects;
     [SerializeField] private GameObject[] stObjects;
     [SerializeField] private Button resetButt;
-
     private GameObject resetObj;
     private GameObject stObj;
     private int currentResetIndex = 0;
     private bool activator = false;
-
     private void Start()
     {
         resetButt.onClick.AddListener(OnResetButtonClick);
     }
-
     private void Update()
     {
         if (activator == true)
@@ -29,7 +25,6 @@ public class ResetButtonScript : MonoBehaviour
             } 
         }        
     }
-
     private void ResetObject()
     {
         for (int i = 0; i < resetObjects.Length; i++)
@@ -48,7 +43,6 @@ public class ResetButtonScript : MonoBehaviour
             }
         }
     }
-
     private void OnResetButtonClick()
     {
         activator = true;
