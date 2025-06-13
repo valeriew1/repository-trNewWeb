@@ -9,7 +9,6 @@ public class OpenSettingsScript : MonoBehaviour
         SettingsButton.onClick.AddListener(OnSettingsButScript);
     }
 
-    
     public void OnSettingsButScript() 
     {
         Canvas[] allCanvases = Resources.FindObjectsOfTypeAll<Canvas>();
@@ -18,16 +17,11 @@ public class OpenSettingsScript : MonoBehaviour
             if (canvas.name == "CanvasMenu")
             {
                 canvas.gameObject.SetActive(true);
-                
             }
             if (canvas.name == "SettingsCanvas")
             {
                 canvas.gameObject.SetActive(true);
             }
         }
-
     }
-
-    
-
 }
