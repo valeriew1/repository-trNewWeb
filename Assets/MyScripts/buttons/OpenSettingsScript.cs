@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-
 public class OpenSettingsScript : MonoBehaviour
 {
     [SerializeField] private Button SettingsButton;
@@ -8,7 +7,6 @@ public class OpenSettingsScript : MonoBehaviour
     {
         SettingsButton.onClick.AddListener(OnSettingsButScript);
     }
-
     public void OnSettingsButScript() 
     {
         Canvas[] allCanvases = Resources.FindObjectsOfTypeAll<Canvas>();
